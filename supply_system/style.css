@@ -1,0 +1,146 @@
+ :root {
+      --bg: #1e2a25;
+      --card: rgba(255,255,255,0.95);
+      --accent: #4a6741;
+      --accent-hover: #3b5235;
+      --muted: #c1d1c0;
+      --error: #dc2626;
+      --success: #16a34a;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body.login-bg {
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      background: linear-gradient(rgba(30,42,37,0.7), rgba(30,42,37,0.7)),
+                  url("shoes-bg.jpg") no-repeat center center/cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .card {
+      background: var(--card);
+      width: 100%;
+      max-width: 400px;
+      padding: 36px 32px;
+      border-radius: 18px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+      animation: fadeIn 0.6s ease;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    p.lead {
+      color: #6b7280;
+      margin-bottom: 20px;
+    }
+
+    form {
+      text-align: left; /* Align form elements left */
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 16px;
+      margin-top: 6px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      font-size: 15px;
+      background: #f9fafb;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(74,103,65,0.25);
+      outline: none;
+    }
+
+    .actions {
+      margin-top: 20px;
+      text-align: center; /* Center the button */
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(90deg, #4a6741, #3b5235);
+      color: #fff;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.03);
+      opacity: 0.9;
+    }
+
+    .msg {
+      margin-top: 12px;
+      font-size: 14px;
+      min-height: 20px;
+    }
+
+    .error {
+      color: var(--error);
+    }
+
+    .success {
+      color: var(--success);
+    }
+
+    .small {
+      font-size: 13px;
+      margin-top: 18px;
+    }
+
+    .small a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .small a:hover {
+      text-decoration: underline;
+    }
+
+    .logo img {
+      width: 190px;       
+      height: auto;
+      margin-bottom: 15px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
